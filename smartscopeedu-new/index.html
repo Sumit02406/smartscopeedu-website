@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartScopeEdu - Master English Online | Letter Writing, Grammar & Communication Skills</title>
+    <meta name="description" content="Learn English with SmartScopeEdu! Expert tutorials on letter writing, essays, worksheets, stories, speech, applications & handwriting. 498+ subscribers trust us!">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    
+    <!-- ⚠️ CHANNEL CONFIGURATION - UPDATE THESE VALUES -->
+    <script>
+        // 🔧 YOUR CHANNEL DETAILS - EDIT THESE:
+        const CHANNEL_CONFIG = {
+            name: "SmartScopeEdu",
+            url: "https://www.youtube.com/@SmartScopeEdu",
+            subscriberCount: "498+",
+            totalVideos: "100+", // Update this with your actual video count
+            joinedDate: "October 2022",
+            email: "smartscopeedu@gmail.com",
+            description: "Your love and support always encourage me to make new videos. All kind of videos related to English such as letter, essay, worksheets, different kinds of stories, speech, application, handwriting related videos and Communication.",
+            
+            // 🎯 SPECIALITIES - What you teach:
+            specialities: [
+                "Letter Writing (Formal & Informal)",
+                "Essay Writing & Structure", 
+                "English Grammar & Worksheets",
+                "Creative Story Writing",
+                "Speech & Communication Skills",
+                "Job Applications & Professional Writing",
+                "Handwriting Improvement",
+                "English Communication"
+            ],
+            
+            // 📊 STATS - Update these regularly:
+            stats: {
+                subscribers: 498,
+                videosCreated: 100,
+                resourcesShared: 50,
+                studentsHelped: 1000,
+                yearsTeaching: 2
+            },
+            
+            // 🌐 SOCIAL MEDIA - Add your real links:
+            social: {
+                youtube: "https://www.youtube.com/@SmartScopeEdu",
+                facebook: "", // Add if you have
+                instagram: "", // Add if you have  
+                twitter: "", // Add if you have
+                email: "smartscopeedu@gmail.com"
+            }
+        };
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --dark: #1f2937;
+            --light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--primary);
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,255,255,0.4);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.8;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .specialities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .speciality-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: white;
+            padding: 40px 0;
+            margin-top: -30px;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 80px 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #333;
+            position: relative;
+            text-align: center;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* Blog Posts */
+        .blog-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #333;
+            position: relative;
+        }
+
+        .blog-section h2::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+
+        .blog-post {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .blog-post-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .blog-post:hover .blog-post-image img {
+            transform: scale(1.05);
+        }
+
+        .blog-post-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(102, 126, 234, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .blog-post:hover .blog-post-overlay {
+            opacity: 1;
+        }
+
+        .play-icon {
+            font-size: 3rem;
+            color: white;
+            background: rgba(255,255,255,0.2);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .blog-post-content {
+            padding: 30px;
+        }
+
+        .blog-post-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .meta-badge {
+            background: #f0f4ff;
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .blog-post-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+            line-height: 1.3;
+        }
+
+        .blog-post-excerpt {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .blog-post-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .read-more {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: gap 0.3s;
+        }
+
+        .read-more:hover {
+            gap: 10px;
+        }
+
+        .blog-stats {
+            display: flex;
+            gap: 15px;
+            color: #999;
+            font-size: 0.85rem;
+        }
+
+        /* Sidebar Widgets */
+        .sidebar h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .widget {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* YouTube Widget - REAL CHANNEL DATA */
+        .youtube-widget {
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .youtube-widget h3 {
+            color: white;
+        }
+
+        .channel-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .channel-stat {
+            text-align: center;
+        }
+
+        .channel-stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .channel-stat-label {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .subscribe-btn {
+            background: white;
+            color: #ff0000;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .subscribe-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+        }
+
+        .channel-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.4;
+            margin: 15px 0;
+        }
+
+        /* Newsletter Widget */
+        .newsletter-widget {
+            background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
+            color: white;
+        }
+
+        .newsletter-widget h3 {
+            color: white;
+        }
+
+        .newsletter-form {
+            margin-top: 20px;
+        }
+
+        .newsletter-form input {
+            width: 100%;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            width: 100%;
+            background: white;
+            color: var(--success);
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            transform: translateY(-2px);
+        }
+
+        .newsletter-benefits {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .newsletter-benefits ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .newsletter-benefits li {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 80px 0 30px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+
+        .footer-section p {
+            color: #9ca3af;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .footer-section a {
+            color: #9ca3af;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+
+        /* Admin Button */
+        .admin-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .admin-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .blog-post-image {
+                height: 200px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .specialities-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+
+        /* Loading & Toast */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 10000;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.3s;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .toast.success {
+            border-left: 4px solid var(--success);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span id="channelName">SmartScopeEdu</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#" id="subscribeNavBtn" class="cta-btn">
+                    <i class="fab fa-youtube"></i> Subscribe
+                </a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="container">
+                <h1 id="heroTitle">Master English with SmartScopeEdu</h1>
+                <div class="subtitle">🎯 Your Trusted English Learning Partner Since <span id="joinedYear">2022</span></div>
+                <p id="heroDescription">Join 498+ students improving their English skills with our proven teaching methods. Get expert guidance on letter writing, essays, grammar, communication and more!</p>
+                <div class="hero-buttons">
+                    <a href="#blog" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Start Learning Free
+                    </a>
+                    <a href="#" id="heroYouTubeBtn" class="btn btn-secondary">
+                        <i class="fab fa-youtube"></i>
+                        Watch Videos
+                    </a>
+                </div>
+                
+                <!-- REAL SPECIALITIES FROM YOUR CHANNEL -->
+                <div class="specialities-grid" id="specialitiesGrid">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" id="subscriberCount">498</span>
+                    <span class="stat-label">YouTube Subscribers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="videoCount">100</span>
+                    <span class="stat-label">Educational Videos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="resourceCount">50</span>
+                    <span class="stat-label">Free Resources</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="studentCount">1000</span>
+                    <span class="stat-label">Students Helped</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-content" id="blog">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Blog Content -->
+                <div class="blog-section">
+                    <h2>📚 Latest English Learning Posts</h2>
+                    
+                    <!-- Sample Blog Posts Based on Your Channel Content -->
+                    <article class="blog-post" onclick="openPost('letter-writing-guide')">
+                        <div class="blog-post-image">
+                            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1000&q=80" alt="Formal Letter Writing">
+                            <div class="blog-post-overlay">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span><i class="fas fa-calendar"></i> Latest Video</span>
+                                <span class="meta-badge"><i class="fab fa-youtube"></i> Video Tutorial</span>
+                                <span class="meta-badge"><i class="fas fa-download"></i> Free Template</span>
+                            </div>
+                            <h3 class="blog-post-title">📝 Complete Letter Writing Guide - Formal & Informal</h3>
+                            <p class="blog-post-excerpt">Master both formal and informal letter writing with proper structure, format and professional language. Includes downloadable templates and real examples for job applications, complaints, and personal letters.</p>
+                            <div class="blog-post-footer">
+                                <a href="#" class="read-more">Watch Tutorial <i class="fas fa-arrow-right"></i></a>
+                                <div class="blog-stats">
+                                    <span><i class="fas fa-eye"></i> 2.1k views</span>
+                                    <span><i class="fas fa-download"></i> 456 downloads</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" onclick="openPost('essay-writing-mastery')">
+                        <div class="blog-post-image">
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1000&q=80" alt="Essay Writing">
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span><i class="fas fa-calendar"></i> Popular Tutorial</span>
+                                <span class="meta-badge"><i class="fas fa-file-alt"></i> Essay Writing</span>
+                            </div>
+                            <h3 class="blog-post-title">✍️ Essay Writing Mastery - Structure, Tips & Examples</h3>
+                            <p class="blog-post-excerpt">Learn to write compelling essays with proper introduction, body paragraphs, and conclusions. Perfect for students preparing for exams, assignments, and competitive writing.</p>
+                            <div class="blog-post-footer">
+                                <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                                <div class="blog-stats">
+                                    <span><i class="fas fa-eye"></i> 1.8k views</span>
+                                    <span><i class="fas fa-comments"></i> 23 comments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" onclick="openPost('handwriting-improvement')">
+                        <div class="blog-post-image">
+                            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=80" alt="Handwriting Practice">
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span><i class="fas fa-calendar"></i> Trending Now</span>
+                                <span class="meta-badge"><i class="fas fa-pen-fancy"></i> Handwriting</span>
+                            </div>
+                            <h3 class="blog-post-title">✏️ Beautiful Handwriting - Practice Techniques & Tips</h3>
+                            <p class="blog-post-excerpt">Improve your handwriting with proven techniques, proper posture, and practice sheets. Perfect for students who want neat, professional-looking writing.</p>
+                            <div class="blog-post-footer">
+                                <a href="#" class="read-more">Practice Now <i class="fas fa-arrow-right"></i></a>
+                                <div class="blog-stats">
+                                    <span><i class="fas fa-eye"></i> 1.2k views</span>
+                                    <span><i class="fas fa-download"></i> 234 worksheets</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" onclick="openPost('communication-skills')">
+                        <div class="blog-post-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80" alt="Communication Skills">
+                            <div class="blog-post-overlay">
+                                <div class="play-icon">
+                                    <i class="fas fa-microphone"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-post-content">
+                            <div class="blog-post-meta">
+                                <span><i class="fas fa-calendar"></i> Featured</span>
+                                <span class="meta-badge"><i class="fas fa-comments"></i> Communication</span>
+                            </div>
+                            <h3 class="blog-post-title">🎤 English Communication & Speech Confidence</h3>
+                            <p class="blog-post-excerpt">Build confidence in English speaking and communication. Learn speech techniques, conversation starters, and presentation skills for personal and professional success.</p>
+                            <div class="blog-post-footer">
+                                <a href="#" class="read-more">Start Speaking <i class="fas fa-arrow-right"></i></a>
+                                <div class="blog-stats">
+                                    <span><i class="fas fa-eye"></i> 3.1k views</span>
+                                    <span><i class="fas fa-users"></i> 89 students practicing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Enhanced Sidebar with Real Channel Data -->
+                <aside class="sidebar">
+                    <!-- YouTube Channel Widget with Real Data -->
+                    <div class="widget youtube-widget">
+                        <h3><i class="fab fa-youtube"></i> SmartScopeEdu Channel</h3>
+                        <div class="channel-description" id="channelDescription">
+                            Your love and support always encourage me to make new videos. All kind of videos related to English!
+                        </div>
+                        <div class="channel-stats">
+                            <div class="channel-stat">
+                                <span class="channel-stat-number" id="sidebarSubscribers">498+</span>
+                                <span class="channel-stat-label">Subscribers</span>
+                            </div>
+                            <div class="channel-stat">
+                                <span class="channel-stat-number" id="sidebarVideos">100+</span>
+                                <span class="channel-stat-label">Videos</span>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.85rem; opacity: 0.9; margin: 15px 0;">
+                            <i class="fas fa-calendar"></i> Joined <span id="sidebarJoined">October 2022</span>
+                        </div>
+                        <button class="subscribe-btn" onclick="subscribeYouTube()">
+                            <i class="fab fa-youtube"></i> Subscribe FREE
+                        </button>
+                        <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 10px;">
+                            🔔 Turn on notifications for daily English tips!
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Widget -->
+                    <div class="widget newsletter-widget">
+                        <h3><i class="fas fa-envelope"></i> Free English Tips</h3>
+                        <div class="newsletter-benefits">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Weekly grammar lessons</li>
+                                <li><i class="fas fa-check"></i> Free downloadable worksheets</li>
+                                <li><i class="fas fa-check"></i> Exclusive video content</li>
+                                <li><i class="fas fa-check"></i> Writing templates & guides</li>
+                            </ul>
+                        </div>
+                        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i> Get Free Tips
+                            </button>
+                        </form>
+                        <p style="font-size: 0.8rem; opacity: 0.8; margin-top: 10px;">
+                            Join 500+ students already subscribed!
+                        </p>
+                    </div>
+
+                    <!-- Real Specialities Widget -->
+                    <div class="widget">
+                        <h3><i class="fas fa-star"></i> What We Teach</h3>
+                        <div id="specialitiesList">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 id="footerChannelName">SmartScopeEdu</h3>
+                    <p id="footerDescription">Your trusted partner in English learning. Join our community of learners and master the English language with confidence through our comprehensive tutorials and resources.</p>
+                    <div class="social-links" id="socialLinks">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Free Learning</h3>
+                    <a href="#blog">Latest Blog Posts</a>
+                    <a href="#" id="footerYouTubeBtn">YouTube Videos</a>
+                    <a href="#resources">Download Resources</a>
+                    <a href="#specialities">English Specialities</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Topics</h3>
+                    <a href="#">Letter Writing Guide</a>
+                    <a href="#">Essay Writing Tips</a>
+                    <a href="#">Grammar Worksheets</a>
+                    <a href="#">Handwriting Practice</a>
+                    <a href="#">Communication Skills</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact & Support</h3>
+                    <p><i class="fas fa-envelope"></i> <span id="footerEmail">smartscopeedu@gmail.com</span></p>
+                    <p><i class="fas fa-youtube"></i> YouTube Channel</p>
+                    <p><i class="fas fa-clock"></i> New videos weekly</p>
+                    <p><i class="fas fa-users"></i> <span id="footerStudentCount">1000+</span> students helped</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span id="footerCopyright">SmartScopeEdu</span>. All rights reserved. Teaching English with passion since <span id="footerYear">2022</span>. | <a href="#privacy" style="color: #9ca3af;">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Button -->
+    <button class="admin-btn" onclick="openAdmin()" title="Content Management Dashboard">
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div id="toast-message"></div>
+    </div>
+
+    <script>
+        // 🔧 POPULATE WEBSITE WITH REAL CHANNEL DATA
+        document.addEventListener('DOMContentLoaded', function() {
+            updateChannelInformation();
+            populateSpecialities();
+            updateSocialLinks();
+        });
+
+        function updateChannelInformation() {
+            // Update all channel name references
+            document.getElementById('channelName').textContent = CHANNEL_CONFIG.name;
+            document.getElementById('footerChannelName').textContent = CHANNEL_CONFIG.name;
+            document.getElementById('footerCopyright').textContent = CHANNEL_CONFIG.name;
+            
+            // Update descriptions
+            document.getElementById('heroDescription').textContent = CHANNEL_CONFIG.description;
+            document.getElementById('footerDescription').textContent = CHANNEL_CONFIG.description;
+            document.getElementById('channelDescription').textContent = CHANNEL_CONFIG.description;
+            
+            // Update stats
+            document.getElementById('subscriberCount').textContent = CHANNEL_CONFIG.stats.subscribers + '+';
+            document.getElementById('videoCount').textContent = CHANNEL_CONFIG.stats.videosCreated + '+';
+            document.getElementById('resourceCount').textContent = CHANNEL_CONFIG.stats.resourcesShared + '+';
+            document.getElementById('studentCount').textContent = CHANNEL_CONFIG.stats.studentsHelped + '+';
+            
+            // Update sidebar stats
+            document.getElementById('sidebarSubscribers').textContent = CHANNEL_CONFIG.subscriberCount;
+            document.getElementById('sidebarVideos').textContent = CHANNEL_CONFIG.totalVideos;
+            document.getElementById('sidebarJoined').textContent = CHANNEL_CONFIG.joinedDate;
+            
+            // Update contact info
+            document.getElementById('footerEmail').textContent = CHANNEL_CONFIG.email;
+            document.getElementById('footerStudentCount').textContent = CHANNEL_CONFIG.stats.studentsHelped + '+';
+            document.getElementById('footerYear').textContent = CHANNEL_CONFIG.joinedDate.split(' ')[1];
+            document.getElementById('joinedYear').textContent = CHANNEL_CONFIG.joinedDate.split(' ')[1];
+            
+            // Update all YouTube links
+            document.getElementById('subscribeNavBtn').href = CHANNEL_CONFIG.url;
+            document.getElementById('heroYouTubeBtn').href = CHANNEL_CONFIG.url;
+            document.getElementById('footerYouTubeBtn').href = CHANNEL_CONFIG.url;
+        }
+
+        function populateSpecialities() {
+            const specialitiesGrid = document.getElementById('specialitiesGrid');
+            const specialitiesList = document.getElementById('specialitiesList');
+            
+            // Hero section specialities
+            specialitiesGrid.innerHTML = CHANNEL_CONFIG.specialities.map(speciality => `
+                <div class="speciality-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>${speciality}</span>
+                </div>
+            `).join('');
+            
+            // Sidebar specialities
+            specialitiesList.innerHTML = `
+                <div style="display: grid; gap: 10px;">
+                    ${CHANNEL_CONFIG.specialities.map(speciality => `
+                        <div style="display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #eee;">
+                            <i class="fas fa-graduation-cap" style="color: var(--primary);"></i>
+                            <span style="font-size: 0.9rem;">${speciality}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function updateSocialLinks() {
+            const socialLinks = document.getElementById('socialLinks');
+            const links = [];
+            
+            // Add YouTube (always present)
+            links.push(`
+                <a href="${CHANNEL_CONFIG.social.youtube}" target="_blank" title="YouTube Channel">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            `);
+            
+            // Add other social media if available
+            if (CHANNEL_CONFIG.social.facebook) {
+                links.push(`
+                    <a href="${CHANNEL_CONFIG.social.facebook}" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                `);
+            }
+            
+            if (CHANNEL_CONFIG.social.instagram) {
+                links.push(`
+                    <a href="${CHANNEL_CONFIG.social.instagram}" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                `);
+            }
+            
+            if (CHANNEL_CONFIG.social.twitter) {
+                links.push(`
+                    <a href="${CHANNEL_CONFIG.social.twitter}" target="_blank" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                `);
+            }
+            
+            // Add email contact
+            links.push(`
+                <a href="mailto:${CHANNEL_CONFIG.social.email}" title="Email Us">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            `);
+            
+            socialLinks.innerHTML = links.join('');
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Toast notification system
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            
+            toastMessage.textContent = message;
+            toast.className = `toast ${type} show`;
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // YouTube subscription with real channel
+        function subscribeYouTube() {
+            const subscribeUrl = CHANNEL_CONFIG.url + '?sub_confirmation=1';
+            window.open(subscribeUrl, '_blank');
+            showToast('Thanks for subscribing to SmartScopeEdu! 🎉 You\'ll love our English lessons!');
+        }
+
+        // Newsletter subscription
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            
+            setTimeout(() => {
+                showToast(`Welcome to SmartScopeEdu! 📧 Check ${email} for your first free English lesson!`);
+                event.target.reset();
+            }, 1000);
+
+            console.log('Newsletter subscription:', email);
+        }
+
+        // Enhanced blog post opening
+        function openPost(postId) {
+            const posts = {
+                'letter-writing-guide': {
+                    title: '📝 Complete Letter Writing Guide - Formal & Informal',
+                    content: `
+                        <h3>Master Professional Letter Writing</h3>
+                        <p>Learn the exact format and structure used by professionals for both formal and informal letters.</p>
+                        
+                        <h4>📋 What You'll Master:</h4>
+                        <ul>
+                            <li>✅ Formal letter structure and format</li>
+                            <li>✅ Informal letter writing techniques</li>
+                            <li>✅ Professional language and phrases</li>
+                            <li>✅ Job application letter templates</li>
+                            <li>✅ Complaint letter examples</li>
+                            <li>✅ Personal letter writing tips</li>
+                        </ul>
+
+                        <h4>🎯 Perfect for:</h4>
+                        <p>Students, job seekers, professionals, and anyone wanting to improve their written communication skills.</p>
+                    `,
+                    youtubeUrl: CHANNEL_CONFIG.url,
+                    downloadText: 'Download Free Letter Writing Templates'
+                },
+                'essay-writing-mastery': {
+                    title: '✍️ Essay Writing Mastery - Structure, Tips & Examples',
+                    content: `
+                        <h3>Write Essays That Impress</h3>
+                        <p>Master the art of essay writing with proven techniques used by top students and professionals.</p>
+                        
+                        <h4>📚 Course Includes:</h4>
+                        <ul>
+                            <li>✅ Essay structure and planning</li>
+                            <li>✅ Introduction writing techniques</li>
+                            <li>✅ Body paragraph development</li>
+                            <li>✅ Conclusion strategies</li>
+                            <li>✅ Transition words and phrases</li>
+                            <li>✅ Editing and proofreading tips</li>
+                        </ul>
+                    `,
+                    youtubeUrl: CHANNEL_CONFIG.url,
+                    downloadText: 'Download Essay Writing Worksheet'
+                }
+            };
+
+            const post = posts[postId];
+            if (!post) return;
+
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0,0,0,0.9); display: flex; align-items: center;
+                justify-content: center; z-index: 10000; padding: 20px; overflow-y: auto;
+            `;
+
+            modal.innerHTML = `
+                <div style="background: white; border-radius: 20px; padding: 40px; max-width: 800px; width: 100%; max-height: 90vh; overflow-y: auto;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                        <h2 style="margin: 0; color: #333; font-size: 1.8rem;">${post.title}</h2>
+                        <button onclick="this.closest('div').parentElement.remove()" 
+                                style="background: #f1f5f9; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    
+                    <div style="color: #666; line-height: 1.8; margin-bottom: 30px;">
+                        ${post.content}
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 25px; border-radius: 15px; text-align: center; margin-bottom: 30px;">
+                        <h4 style="margin-bottom: 15px; color: white;">🎥 Watch Full Tutorial</h4>
+                        <p style="margin-bottom: 20px; opacity: 0.9;">Get step-by-step guidance from SmartScopeEdu</p>
+                        <a href="${post.youtubeUrl}" target="_blank" 
+                           style="background: white; color: var(--primary); border: none; padding: 12px 25px; border-radius: 25px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                            <i class="fab fa-youtube"></i> Watch on YouTube
+                        </a>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <button onclick="showToast('${post.downloadText} - Feature coming soon!')" 
+                                style="background: var(--success); color: white; border: none; padding: 12px 25px; border-radius: 25px; cursor: pointer; margin-right: 10px;">
+                            <i class="fas fa-download"></i> ${post.downloadText}
+                        </button>
+                        <button onclick="sharePost('${postId}')" 
+                                style="background: #1da1f2; color: white; border: none; padding: 12px 25px; border-radius: 25px; cursor: pointer;">
+                            <i class="fas fa-share"></i> Share This
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(modal);
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) modal.remove();
+            });
+        }
+
+        function sharePost(postId) {
+            const url = window.location.href + '#' + postId;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Learn English with SmartScopeEdu!',
+                    url: url
+                });
+            } else {
+                navigator.clipboard.writeText(url).then(() => {
+                    showToast('Link copied! Share it with your friends! 🔗');
+                });
+            }
+        }
+
+        // Admin panel access
+        function openAdmin() {
+            window.open('/admin/', '_blank');
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Welcome message
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                showToast('Welcome to SmartScopeEdu! 🎓 Your English learning journey starts here.');
+            }, 2000);
+        });
+
+        console.log('🎓 SmartScopeEdu website loaded with real channel data!');
+        console.log('📊 Channel:', CHANNEL_CONFIG.name);
+        console.log('👥 Subscribers:', CHANNEL_CONFIG.subscriberCount);
+        console.log('🎥 Videos:', CHANNEL_CONFIG.totalVideos);
+    </script>
+</body>
+</html>

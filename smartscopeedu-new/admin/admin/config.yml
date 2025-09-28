@@ -1,0 +1,71 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "featured_image", widget: "image", required: false}
+      - {label: "Category", name: "category", widget: "select", options: ["grammar", "writing", "speaking", "reading", "vocabulary", "general"]}
+      - {label: "Tags", name: "tags", widget: "list", default: ["english"]}
+      - {label: "YouTube Video ID", name: "youtube_id", widget: "string", required: false, hint: "Just the ID part from YouTube URL (e.g., dQw4w9WgXcQ)"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Enable Comments", name: "comments", widget: "boolean", default: true}
+      - {label: "Featured Post", name: "featured", widget: "boolean", default: false, required: false}
+
+  - name: "resources"
+    label: "Resources"
+    folder: "_resources"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Category", name: "category", widget: "select", options: ["worksheet", "template", "guide", "cheatsheet", "exercise"]}
+      - {label: "File", name: "file", widget: "file"}
+      - {label: "Preview Image", name: "preview_image", widget: "image", required: false}
+      - {label: "Free Resource", name: "free", widget: "boolean", default: true}
+
+  - name: "videos"
+    label: "Videos"
+    folder: "_videos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "YouTube URL", name: "youtube_url", widget: "string", pattern: ['^https://(?:www\.)?youtube\.com/watch\?v=.+', 'Must be a valid YouTube URL']}
+      - {label: "Category", name: "category", widget: "select", options: ["grammar", "writing", "speaking", "reading", "vocabulary"]}
+      - {label: "Featured Video", name: "featured", widget: "boolean", default: false}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "General Settings"
+        name: "general"
+        file: "_data/settings.yml"
+        fields:
+          - {label: "Site Title", name: "title", widget: "string", default: "SmartScopeEdu"}
+          - {label: "Site Description", name: "description", widget: "text", default: "Master English with engaging videos, interactive quizzes, and comprehensive learning materials"}
+          - {label: "YouTube Channel URL", name: "youtube_channel", widget: "string", default: "https://www.youtube.com/@SmartScopeEdu"}
+          - {label: "Contact Email", name: "email", widget: "string", default: "smartscopeedu@gmail.com"}
+          - {label: "Subscriber Count", name: "subscribers", widget: "string", default: "498+"}
+          - {label: "Total Videos", name: "total_videos", widget: "string", default: "100+"}
+          - label: "Social Media"
+            name: "social"
+            widget: "object"
+            fields:
+              - {label: "Facebook", name: "facebook", widget: "string", required: false}
+              - {label: "Instagram", name: "instagram", widget: "string", required: false}
+              - {label: "Twitter", name: "twitter", widget: "string", required: false}
